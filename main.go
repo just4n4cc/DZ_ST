@@ -17,14 +17,14 @@ type Code struct {
 }
 
 func NewCode(code string) *Code {
-	g := new(Code)
+	ncode := new(Code)
 	edoc := []byte(code)
 	var res []byte
 	for i := len(edoc) - 1; i >= 0; i-- {
 		res = append(res, edoc[i])
 	}
-	g.value = string(res)
-	return g
+	ncode.value = string(res)
+	return ncode
 }
 
 func (code *Code) Len() int {
